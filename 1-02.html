@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>延迟加载的模版</title>
+</head>
+
+<body>
+  <div id="message"></div>
+  <template id="aTemplate">
+    <img src="http://www.tutorialsavvy.com/wp-content/uploads/2014/11/ReactJS-830-8301-300x300.png" id="profileImage">
+    <script>
+      alert("this is a script");
+    </script>
+  </template>
+
+  <script>
+    (function () {
+      var imageElement = document.getElementById("profileImage"),
+        messageElement = document.getElementById("message");
+      messageElement.innerHTML = "IMG element " + imageElement;
+    })();
+  </script>
+</body>
+
+</html>
