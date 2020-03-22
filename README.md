@@ -21,3 +21,6 @@ Web Component 实战 读书笔记
 
 ##### 导入节点
 深克隆（子节点也能被克隆）[1-04.html](1-04.html)  浅克隆（子元素不会被克隆）
+
+### HTML Import
+#### HTML Import特性检测
