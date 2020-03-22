@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Component: Activating template using importNode method</title>
+</head>
+
+<body>
+  <div id="container"></div>
+  <template id="aTemplate">
+    <h1>Template is activated using importNode method.</h1>
+  </template>
+</body>
+
+<script>
+  var aTemplate = document.querySelector('#aTemplate'),
+    container = document.getElementById('container'),
+    templateContent = aTemplate.content,
+    activeContent = document.importNode(templateContent, true) //深克隆  ,参数为false 则是浅克隆
+
+  container.appendChild(activeContent);
+</script>
+
+
+</html>
