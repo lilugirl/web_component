@@ -24,3 +24,4 @@ Web Component 实战 读书笔记
 
 ### HTML Import
 #### HTML Import特性检测
+[1-05.html](1-05.html)
