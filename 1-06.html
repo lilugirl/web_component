@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>访问引入的文档</title>
+  <link rel="import" href="message.html">
+</head>
+
+<body>
+  <script>
+    (function () {
+
+      var link = document.querySelector('link[rel="import"]');
+      console.log('link', document.querySelector('link[rel="import"]'));
+      console.log('link.import', link.import);
+      var externalDocument = document.querySelector('link[rel="import"]').import;
+      console.log('externalDocument', externalDocument);
+      var headerElement = externalDocument.querySelector('h1');
+
+      console.log('headerElement', headerElement);
+
+      document.body.appendChild(headerElement.cloneNode(true));
+    })();
+  </script>
+</body>
+
+</html>
